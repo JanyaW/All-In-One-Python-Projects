@@ -56,6 +56,10 @@ def get_max_lengths(playlist):
     max_url_length = max(len(song['url']) for song in playlist) if playlist else 0
     return max_name_length, max_artist_length, max_url_length
 
+print("Welcome to the Mood Based Music Recommender!")
+print("This program suggests songs based on your current emotion.")
+print("Available emotions: " + ", ".join(emotion_to_genre.keys()))
+
 # Main loop for user input
 while True:
     emotion = input("\nEnter your emotion (happy, sad, angry, relaxed, energetic, anxious, cheerful, stressed, dreamy, excited, bored, nostalgic, hopeful, content, romantic) or type 'exit' to quit: ").strip().lower()
