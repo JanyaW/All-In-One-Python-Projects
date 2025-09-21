@@ -29,3 +29,8 @@ def track_savings_progress(balance):
             print(f"Congratulations! You've reached your savings goal.")
     else:
         print("No savings goal set.")
+        choice = input("Would you like to set one now? (y/n): ")
+        if choice.lower() == 'y':
+            set_goal()
+        else:
+            print("You can set a savings goal later from the main menu.")
