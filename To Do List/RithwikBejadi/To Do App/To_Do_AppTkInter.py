@@ -208,8 +208,12 @@ class TodoApp:
             # Clear the input fields after adding the task
             self.task_entry.delete(0, tk.END)
             self.category_entry.delete(0, tk.END)
+            
+            self.add_task_to_google_calendar(task, due_date)
+
         else:
             messagebox.showwarning("Input Error", "Please fill all fields.")
+
 
     def search_tasks(self, event):
         """Search tasks based on input in the search bar."""
