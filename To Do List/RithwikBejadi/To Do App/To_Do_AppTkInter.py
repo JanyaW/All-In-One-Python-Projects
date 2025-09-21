@@ -208,8 +208,9 @@ class TodoApp:
             # Clear the input fields after adding the task
             self.task_entry.delete(0, tk.END)
             self.category_entry.delete(0, tk.END)
-            
-            self.add_task_to_google_calendar(task, due_date)
+            should_add = messagebox.askyesno("Add to Google Calendar", f"Would you like to add '{task}' to Google Calendar?")
+            if should_add:      
+                self.add_task_to_google_calendar(task, due_date)
 
         else:
             messagebox.showwarning("Input Error", "Please fill all fields.")
