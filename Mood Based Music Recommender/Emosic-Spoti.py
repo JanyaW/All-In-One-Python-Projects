@@ -67,6 +67,9 @@ while True:
     if emotion == 'exit':
         print("Goodbye my Love!!!")
         break
+    if not emotion:  
+        print("Please enter an emotion or type 'exit'.")
+        continue
 
     # Get playlist based on the emotion
     playlist, genres = recommend_tracks(emotion)
