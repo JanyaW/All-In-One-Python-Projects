@@ -160,7 +160,7 @@ class TodoApp:
         self.task_listbox = tk.Listbox(self.main_frame, font=("Helvetica", 10), bg="#2E2E2E", fg="#FFFFFF", height=15, relief="flat")
         self.task_listbox.pack(pady=10, padx=20, fill=tk.BOTH, expand=True)
 
-    def add_tasl_to_google_calendar(self, task, due_date):
+    def add_task_to_google_calendar(self, task, due_date):
         """Placeholder function to add a task to Google Calendar."""
         # This function would contain the logic to integrate with Google Calendar API
         # For now, it just shows a message box
